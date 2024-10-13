@@ -12,6 +12,7 @@ build/
 Pods/
 XcodeBuild/
 xcuserdata/
+node_modules/
 
 local.properties
 Package.resolved
