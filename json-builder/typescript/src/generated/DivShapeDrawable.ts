@@ -1,0 +1,60 @@
+// Generated code. Do not modify.
+
+import { Exact, IntBoolean, NonEmptyArray } from '../helper';
+import { TemplateBlock, Type } from '../template';
+import { DivExpression } from '../safe-expression';
+
+import {
+    DivShape,
+    IDivStroke,
+} from './';
+
+/**
+ * Drawable of a simple geometric shape.
+ */
+export class DivShapeDrawable<T extends DivShapeDrawableProps = DivShapeDrawableProps> {
+    readonly _props?: Exact<DivShapeDrawableProps, T>;
+
+    readonly type = 'shape_drawable';
+    /**
+     * Fill color.
+     *
+     * @deprecated
+     */
+    color: Type<string | DivExpression>;
+    /**
+     * Shape.
+     */
+    shape: Type<DivShape>;
+    /**
+     * Stroke style.
+     *
+     * @deprecated
+     */
+    stroke?: Type<IDivStroke>;
+
+    constructor(props: Exact<DivShapeDrawableProps, T>) {
+        this.color = props.color;
+        this.shape = props.shape;
+        this.stroke = props.stroke;
+    }
+}
+
+export interface DivShapeDrawableProps {
+    /**
+     * Fill color.
+     *
+     * @deprecated
+     */
+    color: Type<string | DivExpression>;
+    /**
+     * Shape.
+     */
+    shape: Type<DivShape>;
+    /**
+     * Stroke style.
+     *
+     * @deprecated
+     */
+    stroke?: Type<IDivStroke>;
+}
